@@ -40,14 +40,6 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 if file is None:
     st.text("No tomato leaf image is selected\nকোনো টমেটো পাতার ছবি নির্বাচন করা হয়নি")
 else:
-    app_key = 's1gw7jcdkiec777'
-    app_secret = 'curpqlgmno53cz5'
-    access_token = 'sl.BiHZZdhdeKdsLUQgj7RXsd6jjNmMFxRldulSgbI_H9z7cQqBgOyh9RLeejP3mUyKCaBK9gHrLPEKOlxBRee0_Pv-2T0YT6OdoamYAHyrIytigdvlJkD0AZ9YKhhrHVkUIPHPMEK_WIFp'
-    dbx = dropbox.Dropbox(access_token)
-    file_contents = file.read()
-    folder_path = '/tomatoLeaf'  # Specify the desired folder path
-    file_path = f"{folder_path}/{file.name}"
-    dbx.files_upload(file_contents, file_path)
   
     image = Image.open(file)
     st.image(image, use_column_width=True)
